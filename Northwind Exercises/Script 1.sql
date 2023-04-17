@@ -1,1 +1,3 @@
-SELECT * FROM Products WHERE Price> 40 ORDER BY Price DESC
+SELECT * FROM Customers
+WHERE CustomerID >= 50 AND NOT Country = "Argentina"
+LIMIT 5

@@ -1,0 +1,9 @@
+SELECT * FROM Products 
+WHERE Price 
+BETWEEN 20 AND 40
+AND NOT CategoryID = 6
+
+SELECT * FROM Employees
+WHERE BirthDate 
+BETWEEN "1950-0-1" AND "1960-0-1"
+
