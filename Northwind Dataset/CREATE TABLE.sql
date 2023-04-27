@@ -1,0 +1,6 @@
+CREATE TABLE "Rewards" (
+"RewardID" INTEGER,
+"EmployerID" INTEGER,
+"Reward" INTEGER,
+"Month" TEXT,
+PRIMARY KEY ("RewardID" AUTOINCREMENT))
