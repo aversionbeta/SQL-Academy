@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/juand/Dropbox/Profesional/7. Delphus Lab/5. Delphus Lab Academy/SQL-Academy/Northwind Dataset/northwind.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="2735"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,10:mainCategories"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Categories" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="117"/><column index="2" value="145"/><column index="3" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="Categories">SELECT * FROM Categories</sql><sql name="Customers">SELECT * FROM Customers</sql><sql name="Employees">SELECT * FROM Employees</sql><sql name="OrderDetails">SELECT * FROM OrderDetails</sql><sql name="Orders">SELECT * FROM Orders
+
+SELECT ShipperID, COUNT (ShipperID) AS CountShipper FROM Orders
+GROUP BY ShipperID</sql><sql name="Products">SELECT * FROM Products
+INNER JOIN Categories ON Categories.CategoryID = Products.CategoryID
+INNER JOIN OrderDetails ON OrderDetails.ProductID = Products.ProductID
+INNER JOIN Orders ON Orders.OrderID = OrderDetails.OrderID
+INNER JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID</sql><sql name="Rewards">SELECT * FROM Rewards</sql><sql name="Shippers">SELECT * FROM Shippers</sql><sql name="Suppliers">SELECT *, COUNT (ContactName) AS Conteo FROM Suppliers
+LEFT JOIN Shippers ON Suppliers.SupplierID=Shippers.ShipperID
+LEFT JOIN Orders ON Shippers.ShipperID=Orders.ShipperID
+GROUP BY SupplierName
+ORDER BY Conteo DESC</sql><current_tab id="5"/></tab_sql></sqlb_project>
